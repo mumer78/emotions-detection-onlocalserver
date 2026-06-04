@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Face Emotion Detection AI</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+    <style>
+        * {
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            margin: 0;                     /* FIX */
+            min-height: 100vh;             /* FIX */
+            padding: 20px;                 /* SAFE SPACING */
+            background: linear-gradient(135deg, #0f172a, #020617);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #e5e7eb;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .card {
+            background: #020617;
+            border-radius: 16px;
+            padding: 30px;
+            width: 720px;
+            max-width: 100%;               /* RESPONSIVE */
+            box-shadow: 0 20px 40px rgba(0,0,0,0.6);
+            text-align: center;
+        }
+
+        .card h1 {
+            margin: 0;
+            font-weight: 600;
+            font-size: 28px;
+            color: #22c55e;
+        }
+
+        .card p {
+            margin: 10px 0 25px;
+            font-size: 14px;
+            color: #9ca3af;
+        }
+
+        .video-box {
+            border-radius: 14px;
+            overflow: hidden;
+            border: 3px solid #22c55e;
+            box-shadow: 0 10px 25px rgba(34, 197, 94, 0.3);
+        }
+
+        .video-box img {
+            width: 100%;
+            display: block;
+        }
+
+        .footer {
+            margin-top: 15px;
+            font-size: 12px;
+            color: #6b7280;
+        }
+
+        .footer span {
+            color: #22c55e;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="card">
+        <h1>🎭 Face Emotion Detection</h1>
+        <p>Real-time emotion recognition using CNN, OpenCV & TensorFlow</p>
+
+        <div class="video-box">
+            <img src="{{ url_for('video') }}" alt="Live Emotion Detection">
+        </div>
+
+        <div class="footer">
+            Built with <span>Deep Learning</span> • Live Webcam Analysis
+        </div>
+    </div>
+
+</body>
+</html>
